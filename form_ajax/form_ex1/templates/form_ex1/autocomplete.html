@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'form_ex1/autocomplete.css' %}"
+    />
+    <script defer src="{% static 'form_ex1/autocomplete.js' %}"></script>
+    <title>Autocomplete</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <div class="ui-widget">
+      <label for="movies">Movies: </label>
+      <input id="movies" />
+      <ul class="titles-list">Available titles:</ul>
+      {% csrf_token %}
+    </div>
+  </body>
+</html>
